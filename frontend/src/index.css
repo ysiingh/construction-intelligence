@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Barlow", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-display: "Barlow Condensed", "Arial Narrow", system-ui, sans-serif;
+  --color-ink: #1e252b;
+  --color-steel: #2c353c;
+  --color-mute: #5c6770;
+  --color-line: #d3d6d3;
+  --color-concrete: #eceeeb;
+  --color-paper: #f8f8f6;
+  --color-safety: #e4580b;
+  --color-safety-d: #b94408;
+  --color-good: #2f7d4f;
+  --color-warn: #a86400;
+  --color-bad: #b3261e;
+}
+
+body { background: var(--color-concrete); color: var(--color-ink); font-family: var(--font-sans); }
+:focus-visible { outline: 2px solid var(--color-safety); outline-offset: 2px; }
+.tape { height: 6px; background: repeating-linear-gradient(45deg, #e4580b 0 12px, #1e252b 12px 24px); }
+h1, h2, h3 { font-family: var(--font-display); letter-spacing: 0.01em; }
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+@keyframes spin { to { transform: rotate(360deg); } }
+.spin { animation: spin 0.8s linear infinite; }
